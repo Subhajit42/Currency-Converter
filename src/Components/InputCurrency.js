@@ -15,14 +15,30 @@ export default function InputCurrency() {
       if ((option1 == 1) && (option2 == 2)){
             setVal2(val*82**(expo));                // US DOLLAR
       }
+      if ((option1 == 1) && (option2 == 3)){
+            setVal2(val*88**(expo));                // EURO
+        }
+      if ((option1 == 2) && (option2 == 3)){
+            setVal2(val*1.07**(expo));
+      }
+
+
+
     }else{
       if (option1 == option2){
             setVal2(val);                           // EQUAL CONVERSION
       }else{
             if (option1 > option2){
+                  const expo = 1;
                   if ((option1 == 2) && (option2 == 1)){
-                    const expo = 1;
                     setVal2(val*82**(expo));        // INR
+                  }else{
+                      if ((option1 == 3) && (option2 == 1)){
+                          setVal2(val*88**(expo)); 
+                      }
+                      if ((option1 == 3) && (option2 == 2)){
+                          setVal2(val*1.09**(expo)); 
+                      }
                   }
             }
       }
@@ -49,6 +65,7 @@ const [option2,setOption2] = useState(0);
             <option defaultValue>--Choose--</option>
             <option value="1">Rupee</option>
             <option value="2">Dollar</option>
+            <option value="3">Euro</option>
         </select>
     </div>
 
@@ -70,6 +87,7 @@ const [option2,setOption2] = useState(0);
             <option defaultValue>--Choose--</option>
             <option value="1">Rupee</option>
             <option value="2">Dollar</option>
+            <option value="3">Euro</option>
             </select>
     </div>
 
