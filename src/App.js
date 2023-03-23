@@ -9,7 +9,7 @@ function App() {
     <NavBar title="Currency Converter" dropdownList="Options" link="Link" aboutUs="About Us" ></NavBar>
     <InputCurrency/>
     {/* <DarkMode></DarkMode> */}
-
+    
     </>
   )
 }
